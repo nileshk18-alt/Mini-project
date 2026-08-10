@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Smart Todo App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <p class="welcome">Welcome back 👋</p>
+                <h1>Task<span>Flow</span></h1>
+                <p class="subtitle">Organize your day. Get things done.</p>
+            </div>
+
+            <button id="themeBtn" class="icon-btn" title="Toggle theme">
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div>
+                    <span id="totalTasks">0</span>
+                    <small>Total Tasks</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div>
+                    <span id="activeTasks">0</span>
+                    <small>Active</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div>
+                    <span id="completedTasks">0</span>
+                    <small>Completed</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div>
+                    <span id="progressPercent">0%</span>
+                    <small>Progress</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="task-form">
+
+            <div class="input-wrapper">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    maxlength="100"
+                >
+            </div>
+
+            <select id="priority">
+                <option value="low">🟢 Low</option>
+                <option value="medium" selected>🟡 Medium</option>
+                <option value="high">🔴 High</option>
+            </select>
+
+            <select id="category">
+                <option value="General">📌 General</option>
+                <option value="Work">💼 Work</option>
+                <option value="Study">📚 Study</option>
+                <option value="Personal">👤 Personal</option>
+                <option value="Shopping">🛒 Shopping</option>
+            </select>
+
+            <input type="date" id="dueDate">
+
+            <button id="addBtn" class="add-btn">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Search -->
+        <div class="search-container">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your tasks..."
+            >
+
+        </div>
+
+
+        <!-- Filters -->
+        <div class="toolbar">
+
+            <div class="filters">
+
+                <button class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter" data-filter="active">
+                    Active
+                </button>
+
+                <button class="filter" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+            <select id="sortSelect">
+
+                <option value="created">
+                    Sort: Newest
+                </option>
+
+                <option value="priority">
+                    Sort: Priority
+                </option>
+
+                <option value="date">
+                    Sort: Due Date
+                </option>
+
+                <option value="alphabetical">
+                    Sort: A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Task List -->
+        <main>
+
+            <ul id="taskList"></ul>
+
+            <div id="emptyState" class="empty-state">
+
+                <div class="empty-icon">📝</div>
+
+                <h2>No tasks found</h2>
+
+                <p>
+                    Add a new task and start being productive!
+                </p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <button id="clearCompleted" class="danger-btn">
+                🗑 Clear Completed
+            </button>
+
+            <p>
+                <span id="taskCount">0</span> tasks remaining
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-btn">
+                ×
+            </button>
+
+            <h2>Edit Task</h2>
+
+            <input
+                type="text"
+                id="editInput"
+                placeholder="Edit your task"
+            >
+
+            <div class="modal-actions">
+
+                <button id="cancelEdit" class="cancel-btn">
+                    Cancel
+                </button>
+
+                <button id="saveEdit" class="save-btn">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
