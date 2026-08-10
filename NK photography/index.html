@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="NK PhotoStudio - professional photography studio website">
+  <title>NK PhotoStudio | Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Project1.css">
+</head>
+
+<body>
+  <input id="check" type="checkbox"><label class="menu-toggle open" for="check"><i class="fa-solid fa-bars"></i></label>
+  <div class="overlay"></div>
+  <aside class="sidebar_menu">
+    <div class="logo"><a href="#home">NK <span>PhotoStudio</span></a></div>
+    <label class="menu-toggle close" for="check"><i class="fa-solid fa-xmark"></i></label>
+    <nav class="menu">
+      <a class="nav-link active" href="#home"><i class="fa-solid fa-house"></i>Home</a>
+      <a class="nav-link" href="#gallery"><i class="fa-solid fa-image"></i>Gallery</a>
+      <a class="nav-link" href="#services"><i class="fa-solid fa-camera"></i>Services</a>
+      <a class="nav-link" href="#events"><i class="fa-solid fa-calendar-days"></i>Events</a>
+      <a class="nav-link" href="#about"><i class="fa-solid fa-user"></i>About</a>
+      <a class="nav-link" href="#contact"><i class="fa-solid fa-phone"></i>Contact</a>
+    </nav>
+    <div class="sidebar-bottom"><button id="themeBtn"><i class="fa-solid fa-moon"></i><span>Dark Mode</span></button>
+      <div class="social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i
+            class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a><a href="#"><i
+            class="fa-brands fa-x-twitter"></i></a></div>
+    </div>
+  </aside>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><i class="fa-solid fa-camera"></i> Creative Photography Studio</p>
+        <h1>We capture<br><span>your moments.</span></h1>
+        <p class="hero-text">Professional photography for weddings, portraits, events, products and memories that
+          deserve to last forever.</p>
+        <div class="actions"><a class="btn primary" href="#gallery">Explore Gallery <i
+              class="fa-solid fa-arrow-right"></i></a><a class="btn ghost" href="#contact">Book a Session</a></div>
+        <div class="stats">
+          <div><b>500+</b><small>Sessions</small></div>
+          <div><b>250+</b><small>Happy Clients</small></div>
+          <div><b>5+</b><small>Years Experience</small></div>
+        </div>
+      </div>
+      <div class="scroll">Scroll to explore ↓</div>
+    </section>
+    <section id="about" class="section about">
+      <div class="heading">
+        <p class="eyebrow">About us</p>
+        <h2>Photography with a <span>story.</span></h2>
+        <p>We don't just take pictures. We create visual memories that feel natural, emotional and timeless.</p>
+      </div>
+      <div class="about-grid">
+        <article><i class="fa-solid fa-aperture"></i>
+          <h3>Creative Approach</h3>
+          <p>Natural expressions, creative compositions and attention to every detail.</p>
+        </article>
+        <article><i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>Professional Editing</h3>
+          <p>Carefully edited photographs with consistent color, tone and premium finishing.</p>
+        </article>
+        <article><i class="fa-solid fa-heart"></i>
+          <h3>Personal Experience</h3>
+          <p>Friendly planning and personalized sessions designed around your vision.</p>
+        </article>
+      </div>
+    </section>
+    <section id="gallery" class="section">
+      <div class="heading row">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Our <span>Gallery</span></h2>
+        </div>
+        <p>Click any image to open the full preview.</p>
+      </div>
+      <div class="gallery"><button class="gallery-card large" data-title="Portrait Session"><img src="photo.jpg"
+            alt="Portrait photography setup"><span>Portrait Session <small>View photo ↗</small></span></button><button
+          class="gallery-card" data-title="Creative Photography"><img src="photo.jpg"
+            alt="Creative photography"><span>Creative Photography <small>View photo ↗</small></span></button><button
+          class="gallery-card" data-title="Studio Work"><img src="photo.jpg" alt="Studio camera"><span>Studio Work
+            <small>View photo ↗</small></span></button><button class="gallery-card" data-title="Event Coverage"><img
+            src="photo.jpg" alt="Event photography"><span>Event Coverage <small>View photo ↗</small></span></button>
+      </div>
+    </section>
+    <section id="services" class="section services">
+      <div class="heading">
+        <p class="eyebrow">What we do</p>
+        <h2>Our <span>Services</span></h2>
+      </div>
+      <div class="service-grid">
+        <article><i class="fa-solid fa-ring"></i>
+          <h3>Wedding Photography</h3>
+          <p>Emotional, candid and traditional coverage for your special day.</p><a href="#contact">Book now →</a>
+        </article>
+        <article><i class="fa-solid fa-user"></i>
+          <h3>Portraits</h3>
+          <p>Professional portraits for personal branding, portfolios and social profiles.</p><a href="#contact">Book
+            now →</a>
+        </article>
+        <article><i class="fa-solid fa-calendar-check"></i>
+          <h3>Event Coverage</h3>
+          <p>Complete photography coverage for birthdays, parties and corporate events.</p><a href="#contact">Book now
+            →</a>
+        </article>
+        <article><i class="fa-solid fa-box-open"></i>
+          <h3>Product Photography</h3>
+          <p>Clean product images for brands, shops and online businesses.</p><a href="#contact">Book now →</a>
+        </article>
+      </div>
+    </section>
+    <section id="events" class="section">
+      <div class="booking">
+        <div>
+          <p class="eyebrow">Ready to create?</p>
+          <h2>Turn your next moment into a <span>memory.</span></h2>
+          <p>Tell us what you have in mind and let's plan the perfect session.</p>
+        </div><a class="btn primary" href="#contact">Start a Conversation <i class="fa-solid fa-paper-plane"></i></a>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="heading">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's <span>connect.</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info"><a href="tel:+919511866805"><i class="fa-solid fa-phone"></i><span><small>Call
+                us</small>+91  95118 6XXXX</span></a><a href="mailto:hello@nkphotostudio.com"><i
+              class="fa-solid fa-envelope"></i><span><small>Email</small>nileshkhatik001@gmail.com</span></a>
+          <div><i class="fa-solid fa-location-dot"></i><span><small>Studio</small>Your City, India</span></div>
+        </div>
+        <form id="contactForm"><input id="name" required placeholder="Your name"><input id="email" type="email" required
+            placeholder="Email address"><select id="service">
+            <option value="">Select service</option>
+            <option>Wedding Photography</option>
+            <option>Portrait Session</option>
+            <option>Event Coverage</option>
+            <option>Product Photography</option>
+          </select><textarea id="message" required rows="4"
+            placeholder="Tell us about your project..."></textarea><button class="btn primary" type="submit">Send
+            Message <i class="fa-solid fa-paper-plane"></i></button>
+          <p id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>© <span id="year"></span> NK PhotoStudio. All rights reserved.</p><a href="#home">Back to top ↑</a>
+    </footer>
+  </main>
+  <div id="lightbox" class="lightbox"><button id="closeLightbox"><i class="fa-solid fa-xmark"></i></button><img
+      id="lightboxImg" src="" alt="">
+    <p id="lightboxTitle"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
