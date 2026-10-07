@@ -1,0 +1,37 @@
+.ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 18px);
+  padding: 28px;
+}
+
+.ticket-number {
+  display: grid;
+  place-items: center;
+  width: clamp(68px, 9vw, 92px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(145deg, #477e61, #27573f);
+  border: 5px solid #fff;
+  box-shadow: 0 12px 24px rgba(39, 87, 63, .2), inset 0 1px 1px rgba(255,255,255,.45);
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 850;
+  animation: ticketPop .42s both;
+}
+
+.ticket-number:nth-child(2) { animation-delay: .04s; }
+.ticket-number:nth-child(3) { animation-delay: .08s; }
+.ticket-number:nth-child(4) { animation-delay: .12s; }
+
+@keyframes ticketPop {
+  from { opacity: 0; transform: scale(.7) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 520px) {
+  .ticket { gap: 8px; padding: 18px; }
+  .ticket-number { width: 62px; border-width: 4px; }
+}
