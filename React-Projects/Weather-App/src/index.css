@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: #10253f;
+  background: #edf4f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --navy: #10253f;
+  --muted: #718194;
+  --blue: #2276e3;
+  --blue-dark: #1454b7;
+  --panel: rgba(255,255,255,.78);
+  --line: #e6edf2;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; }
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(190,225,255,.85), transparent 30%),
+    radial-gradient(circle at 92% 15%, rgba(255,226,172,.45), transparent 25%),
+    linear-gradient(145deg, #eaf5fb 0%, #f7fafb 52%, #e8f0f4 100%);
+}
+button, input { font: inherit; }
+#root { width: 100%; min-height: 100vh; }
+
+.Main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 24px 60px;
+}
+
+.weather-app-shell {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+}
+
+.app-topbar {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(16,37,63,.08);
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy);
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -.4px;
+}
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: white;
+  background: linear-gradient(145deg, #338cf0, #1757bd);
+  box-shadow: 0 8px 18px rgba(34,118,227,.25);
+}
+.topbar-caption { color: #8a98a7; font-size: 13px; }
+
+.dashboard-heading {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 54px 6px 28px;
+}
+.eyebrow {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.dashboard-heading h1 {
+  margin: 8px 0 8px;
+  color: var(--navy);
+  font-family: Manrope, sans-serif;
+  font-size: clamp(40px, 7vw, 68px);
+  line-height: .98;
+  letter-spacing: -3px;
+}
+.dashboard-heading p { margin: 0; color: var(--muted); font-size: 15px; }
+.heading-cloud { font-size: 110px; line-height: .7; color: rgba(34,118,227,.12); }
+
+@media (max-width: 600px) {
+  .Main { padding: 0 14px 40px; }
+  .app-topbar { height: 68px; }
+  .topbar-caption { display: none; }
+  .dashboard-heading { padding: 40px 3px 24px; }
+  .heading-cloud { display: none; }
+  .dashboard-heading h1 { letter-spacing: -2px; }
+}

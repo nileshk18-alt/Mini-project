@@ -1,0 +1,92 @@
+.weather-result { width: 100%; }
+.weather-card {
+  width: 100% !important;
+  overflow: hidden;
+  border-radius: 30px !important;
+  background: #fff !important;
+  box-shadow: 0 24px 70px rgba(25,59,83,.16) !important;
+}
+
+.weather-visual {
+  position: relative;
+  min-height: 355px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 28px;
+}
+.visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8,25,41,.16), rgba(8,25,41,.72));
+}
+.visual-topline, .visual-bottom { position: relative; z-index: 1; }
+.visual-topline { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.condition-chip, .live-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.25);
+  text-transform: capitalize;
+}
+.live-chip { gap: 7px; }
+.live-chip span { width: 7px; height: 7px; border-radius: 50%; background: #79e39c; }
+.visual-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.location-line { display: flex; align-items: center; gap: 7px; font-family: Manrope, sans-serif; font-size: 34px; font-weight: 800; letter-spacing: -1.2px; }
+.location-line svg { font-size: 25px; }
+.visual-bottom p { margin: 7px 0 0 3px; color: rgba(255,255,255,.78); font-size: 13px; }
+.visual-icon {
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.22);
+  backdrop-filter: blur(10px);
+}
+.visual-icon svg { font-size: 55px; }
+
+.weather-card-content { padding: 30px; }
+.temperature-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.temperature { font-family: Manrope, sans-serif; font-size: clamp(70px, 10vw, 112px); line-height: .8; font-weight: 800; letter-spacing: -6px; color: var(--navy); }
+.temperature-unit { margin-left: 8px; color: #91a0ad; font-family: Manrope, sans-serif; font-size: 28px; font-weight: 700; vertical-align: top; }
+.condition-copy { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; color: #6e7d8b; font-size: 13px; }
+.condition-copy strong { color: var(--navy); font-size: 17px; text-transform: capitalize; }
+.weather-divider { height: 1px; margin: 28px 0 22px; background: var(--line); }
+.weather-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.weather-detail { display: flex; align-items: center; gap: 11px; padding: 16px 14px; border: 1px solid var(--line); border-radius: 17px; background: #f7fafb; }
+.detail-icon { width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 12px; color: var(--blue); background: #eaf3ff; }
+.detail-icon svg { font-size: 20px; }
+.weather-detail span { display: block; margin-bottom: 3px; color: #8b98a4; font-size: 10px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+.weather-detail strong { color: var(--navy); font-size: 14px; }
+.weather-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 20px; color: #98a4ae; font-size: 11px; }
+.weather-footer span:first-child { display: inline-flex; align-items: center; gap: 5px; }
+.weather-footer svg { font-size: 15px; }
+.weather-status { color: #3a9a63; font-weight: 700; }
+
+@media (max-width: 760px) {
+  .weather-visual { min-height: 300px; }
+  .weather-details { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .weather-visual { min-height: 260px; padding: 18px; }
+  .location-line { font-size: 27px; }
+  .visual-icon { width: 68px; height: 68px; border-radius: 21px; }
+  .visual-icon svg { font-size: 40px; }
+  .weather-card-content { padding: 22px 18px; }
+  .temperature { font-size: 76px; letter-spacing: -4px; }
+  .temperature-unit { font-size: 22px; }
+  .temperature-row { align-items: flex-end; }
+  .condition-copy { align-items: flex-end; text-align: right; }
+  .weather-detail { padding: 13px 11px; }
+  .weather-footer { align-items: flex-start; flex-direction: column; }
+}
