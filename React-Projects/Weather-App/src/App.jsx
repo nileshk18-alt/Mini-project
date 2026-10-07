@@ -1,4 +1,4 @@
-import WheatherApp from './WheatherApp';
+import WheatherApp from "./WheatherApp";
 import './App.css';
 
 function App() {
